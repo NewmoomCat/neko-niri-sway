@@ -1,0 +1,151 @@
+* {
+    /* 确保你安装了 Nerd Font，否则图标会变成方框 */
+    font-family: "JetBrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+}
+
+/* 全局窗口：半透明背景 + 圆角 + 悬浮感 */
+window#waybar {
+    background: #11111b; /* 深色玻璃，不透明度65% */
+    border: 1px solid #313244; /* 极细微的玻璃边缘 */
+    border-radius: 0; /* 大圆角 */
+    color: #cdd6f4;
+    transition-property: background-color;
+    transition-duration: .5s;
+    /* 增加一点微弱的外阴影，让状态栏有悬浮在桌面的感觉 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 模块通用样式：让每个模块也有小圆角和半透明底色 */
+#clock, #battery, #cpu, #memory, #disk, #temperature, #backlight,
+#network, #pulseaudio, #wireplumber, #custom-media, #tray, #mode,
+#idle_inhibitor, #scratchpad, #power-profiles-daemon, #mpd,
+#language, #keyboard-state, #privacy, #custom-power
+{
+    padding: 0 10px;
+    margin: 6px 2px; /* 上下留出间距，让模块悬浮 */
+    border-radius: 8px; /* 模块内部小圆角 */
+    background: rgba(255, 255, 255, 0.05); /* 轻微的玻璃反光感 */
+    color: #cdd6f4;
+}
+
+/* 工作区按钮 */
+#workspaces button {
+    padding: 1 6px;
+    margin: 6px 2px;
+    border-radius: 8px;
+    background: transparent;
+    color: #cdd6f4;
+    transition: all 0.3s ease;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: inset 0 -3px rgba(255, 255, 255, 0.4); /* 玻璃边缘反光 */
+}
+
+#workspaces button.focused, #workspaces button.active {
+    background: #56FEEF; /* 活动工作区：高亮蓝色玻璃 */
+    color: #1e1e2e;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+    background: rgba(235, 77, 75, 0.8);
+    color: #1e1e2e;
+}
+
+#cpu {
+    background-color: #56FEEF;
+    color: #1e1e2e;
+}
+
+#memory {
+    background-color: #56FEEF;
+    color: #1e1e2e;
+}
+
+/* 时钟模块特殊颜色 */
+#clock {
+    background: rgba(100, 114, 125, 0.6);
+    color: #ffffff;
+}
+
+#keyboard-state {
+    background: rgba(100, 114, 125, 0.6);
+    color: #ffffff;
+}
+
+#language {
+    background: rgba(100, 114, 125, 0.6);
+    color: #ffffff;
+}
+
+#temperature {
+    background: rgba(100, 114, 125, 0.6);
+    color: #ffffff;
+}
+
+/* 电池模块特殊颜色 */
+#battery {
+    background: rgba(255, 255, 255, 0.8);
+    color: #1e1e2e;
+}
+
+#battery.charging, #battery.plugged {
+    background: rgba(38, 166, 91, 0.8);
+    color: #ffffff;
+}
+
+@keyframes blink {
+    to {
+        background-color: rgba(255, 255, 255, 0.9);
+        color: #1e1e2e;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: rgba(245, 60, 60, 0.8);
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* 音量模块特殊颜色 */
+#pulseaudio {
+    background: #56FEEF;
+    color: #1e1e2e;
+}
+
+#pulseaudio.muted {
+    background: rgba(144, 177, 177, 0.8);
+    color: #2a5c45;
+}
+
+/* 网络模块 */
+#network {
+    background-color: #56FEEF;
+    color: #1e1e2e;
+}
+
+#network.disconnected {
+    background: rgba(245, 60, 60, 0.8);
+    color: #ffffff;
+}
+
+/* 托盘图标背景透明 */
+#tray {
+    background-color: #56FEEF;
+    color: #1e1e2e;
+    padding: 0 10px;
+}
+
+#custom-power {
+    background: transparent;
+    padding: 0 4px;
+}

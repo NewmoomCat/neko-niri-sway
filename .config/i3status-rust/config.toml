@@ -1,0 +1,7 @@
+[[block]]
+block = "time"
+interval = 5
+format = "%Y-%m-%d %H:%M"
+
+[[block]]
+block = "sound"

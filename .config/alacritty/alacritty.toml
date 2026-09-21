@@ -1,0 +1,28 @@
+[general]
+import = ["themes/themes/catppuccin_mocha.toml"]
+#import = ["themes/themes/catppuccin_latte.toml"]
+
+[font]
+size = 13
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
+
+[window]
+opacity = 0.5
+blur = true
+padding = { x = 7, y = 7 }
+#decorations = "none"
