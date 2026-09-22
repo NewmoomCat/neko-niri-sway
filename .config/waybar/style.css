@@ -22,7 +22,7 @@ window#waybar {
 #clock, #battery, #cpu, #memory, #disk, #temperature, #backlight,
 #network, #pulseaudio, #wireplumber, #custom-media, #tray, #mode,
 #idle_inhibitor, #scratchpad, #power-profiles-daemon, #mpd,
-#language, #keyboard-state, #privacy, #custom-power
+#language, #keyboard-state, #privacy, #custom-power, #custom-launcher
 {
     padding: 0 10px;
     margin: 6px 2px; /* 上下留出间距，让模块悬浮 */
@@ -55,6 +55,11 @@ window#waybar {
 #workspaces button.urgent {
     background: rgba(235, 77, 75, 0.8);
     color: #1e1e2e;
+}
+
+#custom-launcher {
+    background-color: #56FFEF;
+    color: #1e1e2e
 }
 
 #cpu {
