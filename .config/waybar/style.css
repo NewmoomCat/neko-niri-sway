@@ -59,7 +59,8 @@ window#waybar {
 
 #custom-launcher {
     background-color: #56FFEF;
-    color: #1e1e2e
+    color: #1e1e2e;
+    padding: 1 10px;
 }
 
 #cpu {
