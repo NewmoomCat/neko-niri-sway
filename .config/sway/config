@@ -269,6 +269,9 @@ exec --no-startup-id fcitx5 -d
 # 权限
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
+# 其他
+exec --no-startup-id playerctld daemon
+
 # 边框颜色
 client.focused #56FFCF #313244 #cdd6f4 #56FFCF #56FFCF
 

@@ -1,0 +1,87 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "background": "#00897b",
+          "template": " {{ if eq .Code 0 }}✔{{ else }}✘{{ end }} ",
+          "properties": {
+            "always_enabled": true
+          }
+        },
+        {
+          "type": "os",
+          "style": "plain",
+          "foreground": "#2e9599",
+          "template": "{{ if .Icon }} {{ .Icon }} {{ end }}"
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#2e9599",
+          "template": " {{ .Path }} ",
+          "properties": {
+            "style": "folder",
+            "folder_separator_icon": "  "
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#2e9599",
+          "template": " {{ .HEAD }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} ",
+          "properties": {
+            "branch_max_length": 25,
+            "fetch_status": true
+          }
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#00cdcd",
+          "template": " ",
+          "fill": "."
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "background": "#cc0000",
+          "template": " {{ if eq .Code 0 }}\uf00c{{ else }}\uf00d {{ .Code }}{{ end }} "
+        },
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "background": "#555753",
+          "template": " {{ .FormattedMs }} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#4e9a06",
+          "template": "❯"
+        }
+      ]
+    }
+  ]
+}
