@@ -94,10 +94,12 @@ window#waybar {
     color: #ffffff;
 }
 
+/*
 #custom-media {
     background: #55FFEF;
     color: #1e1e2e;
 }
+*/
 
 /* 电池模块特殊颜色 */
 #battery {

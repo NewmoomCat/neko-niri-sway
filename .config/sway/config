@@ -76,7 +76,7 @@ output * background $HOME/Pictures/Wallpapers/reisa_suzumi.jpg fill
     bindsym $mod+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu -show drun -show-icons
+    bindsym $mod+d exec "$HOME/.config/rofi/launchers/type-2/launcher.sh"
 
     # Re/Start fcitx5
     bindsym $mod+F1 exec --no-startup-id sh -c "pkill fcitx5 || true && fcitx5 -d"
